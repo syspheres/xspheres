@@ -1,1 +1,1 @@
-# /data/readme.txt
+# /games/data/readme.txt
