@@ -1,0 +1,24 @@
+{
+  "name": "xspheres",
+  "version": "1.0.0",
+  "description": "xspheres is a collabotrative portal applications",
+  "main": "server.js",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syspheres/xspheres.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syspheres/xspheres/issues"
+  },
+  "homepage": "https://github.com/syspheres/xspheres#readme"
+}
