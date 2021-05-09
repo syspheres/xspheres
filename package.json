@@ -4,7 +4,8 @@
   "description": "xspheres is a collabotrative portal applications",
   "main": "server.js",
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "vm": "^0.1.0"
   },
   "devDependencies": {},
   "scripts": {
