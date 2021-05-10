@@ -2,8 +2,9 @@
   "name": "xspheres",
   "version": "1.0.0",
   "description": "xspheres is a collabotrative portal applications",
-  "main": "server.js",
+  "main": "main.js",
   "dependencies": {
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
     "vm": "^0.1.0"
   },
