@@ -6,9 +6,10 @@ console.log("server.js :"+" Begin");
 global.HomeDir = __dirname; // home folder of xspheres
 
 // load require CServer.js file for declare CServer class for server web management
-var CServer = require("./view/CServer.js");
+var CServer = require("./view/CServer");
 
 
 console.log("HomeDir "+global.HomeDir);
 
 var Server = new CServer();
+Server.Open();
