@@ -1,2 +1,1 @@
-/data/readme.md : this file
-/data/server    : Directory for server files.
+[/data/readme.md]

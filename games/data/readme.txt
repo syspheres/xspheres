@@ -1,1 +1,0 @@
-# /games/data/readme.txt

@@ -5,4 +5,9 @@
                 vm
                 http
                 https
+                path
 /data : global data shared for all xspheres
+/controller : global controller program for all xspheres
+/main.js : main program access
+/main.properties : properties file for main.js program
+

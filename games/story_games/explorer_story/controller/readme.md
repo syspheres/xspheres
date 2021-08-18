@@ -1,0 +1,1 @@
+/games/story_games/explorer_story/controller/readme.md

@@ -1,0 +1,1 @@
+[games/story_games/controller/readme.md]

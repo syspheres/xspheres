@@ -1,17 +1,20 @@
 // /main.js
 // main program of xspheres system 
-console.log("server.js :"+" Begin");
+console.log("/main.js :"+" Begin");
 
 // home folder of xspheres
-global.HomeDir = __dirname;                     
+global.HomeDir = __dirname;  
+console.log("/main.js: HomeDir "+global.HomeDir);                   
 
 // load require CServer.js file for declare CServer class for server web management
-var CServer = require("./view/CServer");        
+console.log("/main.js : require CServer class");
+var CServer = require("./view/server/CServer"); 
+console.log("/main.js : require CFile class");     
 
-
-console.log("HomeDir "+global.HomeDir);
 
 // declare class server described in CServer.js
 // open server
 var Server = new CServer();                     
-Server.Open();                                  
+Server.Open();    
+
+console.log("/main.js :"+" End");

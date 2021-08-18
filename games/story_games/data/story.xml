@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- story example: "example de story" -->
+<!DOCTYPE bibliography SYSTEM "story.dtd" >
+<collection key="collection" lang="fr" id="0">
+    <introduction>
+        Introduction of collection
+    </introduction>
+    <storygame >
+        <timestamp></timestamp>
+        <rules></rules>
+    </storygame>
+    <actors>
+        <actor name="one" alias="patrice" species="human" sex="man" age="40" color="black" job="animator" intelligence="5" skill="5" live="10" charism="2" muscle="5" beauty="5" breast="0" sex="25" bitch="7" sexapeal="4" seduced="5" seducer="?/10" fidelity="1" endurance="9"></actor>
+        <actor name="two" alias="noce" species="human" sex="woman" age="36" color="white" job="none" intelligence="6" skill="5" live="10" charism="6" muscle="2" beauty="7" breast="100" sex="0" bitch="3" sexapeal="6" seduced="?/10" seducer="3" fidelity="?/10" endurance="3"></actor>
+        <actor name="three" 
+    </actors>
+    <group maxplayer=1 request="all=N">
+        groupname=?
+        groupmail=?
+    </group>
+    <player request="playername=Y,playermail=N">
+        playername=?
+        playermail=?
+    </player>
+    <time unity="d" mintime=1 maxtime=30></time>
+    <book key="story" id="0.0">
+        <introduction>
+            description of book
+        </introduction>
+    </book>
+</collection>

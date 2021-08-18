@@ -1,0 +1,1 @@
+/games/story_games/explorer_story/job/readme.md
