@@ -10,7 +10,8 @@
     "https": "^1.0.0",
     "path": "^0.12.7",
     "properties-reader": "^2.2.0",
-    "vm": "^0.1.0"
+    "vm": "^0.1.0",
+    "winston": "^3.5.1"
   },
   "devDependencies": {},
   "scripts": {

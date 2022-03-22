@@ -1,23 +1,34 @@
 // CFile.js
 // file class program
 // Path Module
+console.log("/controller/file/CFile.js: Begin");
 
-// declare module constant
+// Global system require Section
+//console.log("/controller/file/CFile.js: require system section");
+const Vm = require("vm");
+const Fs = require("fs");
+const Path = require("path");
+
+// Global XSpheres Require Class section
+//console.log("/controller/file/CFile.js: require Xspheres Class section");
+
 
 // Global Include Section
-Vm.runInThisContext(Fs.readFileSync(global.HomePath + "main_include.js"));
-Vm.runInThisContext(Fs.readFileSync(global.ControllerFilePath + "CommonFile_include.js"));
+//console.log("/controller/file/CFile.js: runInThisContext section");
+//DelVm.runInThisContext(Fs.readFileSync(global.HomePath + "main_include.js"));
+eval(Fs.readFileSync(global.HomePath + "main_include.js")+'');
+
+//Vm.runInThisContext(Fs.readFileSync(global.ControllerFilePath + "CommonFile_include.js"));
+eval(Fs.readFileSync(global.ControllerFilePath + "CFile_include.js")+'');
 
 // CFile class
-class CFile extends CommonFile {
+class CFile {
 
     // Constructor function 
     // declare class variable
     // param Filename, name of file
     // param Option,
     constructor(_FileName,_Option) {
-
-        super(_FileName,_Option);
 
         this.FileName = "";
         this.Type = "";
@@ -28,7 +39,7 @@ class CFile extends CommonFile {
         this.FileName=_FileName;
         this.Action=_Option;
         this.Type = Path.extname(this.FileName);
-        console.log("CFile.js: CFile: Constructor: filename="+this.FileName+":extname="+this.Type+":Action="+this.Action);
+        console.log("/controller/file/CFile.js: CFile: Constructor: filename="+this.FileName+":extname="+this.Type+":Action="+this.Action);
 
         // Test the file type and loading elements according to the file type
         switch(this.Type) {

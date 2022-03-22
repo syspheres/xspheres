@@ -4,17 +4,24 @@
 // http listen module
 // https listen module
 
+// Global system require Section
+console.log("/view/server/CServer.js: Begin");
+const Vm = require("vm");
+const Fs = require("fs");
+const Path = require("path");
+
 // declare local require constant
 const Express = require('express');
 const Http = require('http');
 const Https = require('https');
 
 // Global Include Section
-Vm.runInThisContext(Fs.readFileSync(global.HomeDir + "/main_include.js"));
+//console.log("/view/server/CServer.js: runInThisContext section");
+//Vm.runInThisContext(Fs.readFileSync(global.HomeDir + "/main_include.js"));
+eval(Fs.readFileSync(global.HomePath + "main_include.js")+'');
 
 // express server class
 class CServer {
-
     // Constructor function 
     // declare class variable
     constructor() {
@@ -33,7 +40,7 @@ class CServer {
 
         // open and search properties in CServer.properties file
         var FileName = __dirname+"/CServer.properties";
-        console.log("CServer.js: CServer: FileName="+FileName+",Option=OPEN");
+        console.log("/view/server/CServer.js: CServer: FileName="+FileName+",Option=OPEN");
         var PropertieFile = new CFile(FileName,"OPEN");
 
         // load port, provate key, certificate, and passphrase from CServer.properties file
@@ -55,25 +62,25 @@ class CServer {
 
         //get express application instance
         this.Server.get('/', (req, res) => {
-            console.log("CServer.js: CServer: Open: get");
+            console.log("/view/server/CServer.js: CServer: Open: get");
             res.send('Hello World');
         });
 
         // Listen a http port with error management
         this.ServerHttp.listen(this.PortHttp, (Err) => {
             if(Err){
-                console.log(Err);
+                console.log("/view/server/CServer.js: CServer: Open Http,Err="+Err);
             } else {
-                console.log("CServer.js: CServer: Open: listen: Listen on http://localhost:" + this.PortHttp);
+                console.log("/view/server/CServer.js: CServer: Open: listen: Listen on http://localhost:" + this.PortHttp);
             }
         });
 
         // Listen a https port with error management
         this.ServerHttps.listen(this.PortHttps, (Err) => {
             if(Err){
-                console.log(Err);
+                console.log("/view/server/CServer.js: CServer: Open Https,Err="+Err);
             } else {
-                console.log("CServer.js:CServer:Open: listen: Listen on on https://localhost:" + this.PortHttps);
+                console.log("/view/server/CServer.js: CServer: Open: listen: Listen on on https://localhost:" + this.PortHttps);
             }
         });
 
