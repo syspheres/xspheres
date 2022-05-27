@@ -1,0 +1,7 @@
+[2022-05-27 01:18:56.789 PM] emergency: 	Emergency message
+[2022-05-27 01:18:56.796 PM] alert: 	Alert message
+[2022-05-27 01:18:56.797 PM] critical: 	Critical message
+[2022-05-27 01:18:56.799 PM] error: 	Error message
+[2022-05-27 01:18:56.801 PM] warning: 	Warning message
+[2022-05-27 01:18:56.802 PM] notice: 	Notice message
+[2022-05-27 01:18:56.803 PM] http: 	http message
