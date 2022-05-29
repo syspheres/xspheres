@@ -5,3 +5,17 @@
 [2022-05-27 01:18:56.801 PM] warning: 	Warning message
 [2022-05-27 01:18:56.802 PM] notice: 	Notice message
 [2022-05-27 01:18:56.803 PM] http: 	http message
+[2022-05-27 06:29:31.128 PM] emergency: 	Emergency message
+[2022-05-27 06:29:31.133 PM] alert: 	Alert message
+[2022-05-27 06:29:31.134 PM] critical: 	Critical message
+[2022-05-27 06:29:31.135 PM] error: 	Error message
+[2022-05-27 06:29:31.136 PM] warning: 	Warning message
+[2022-05-27 06:29:31.137 PM] notice: 	Notice message
+[2022-05-27 06:29:31.138 PM] http: 	http message
+[2022-05-27 06:31:46.876 PM] emergency: 	Emergency message
+[2022-05-27 06:31:46.879 PM] alert: 	Alert message
+[2022-05-27 06:31:46.880 PM] critical: 	Critical message
+[2022-05-27 06:31:46.881 PM] error: 	Error message
+[2022-05-27 06:31:46.881 PM] warning: 	Warning message
+[2022-05-27 06:31:46.882 PM] notice: 	Notice message
+[2022-05-27 06:31:46.882 PM] http: 	http message

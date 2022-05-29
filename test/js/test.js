@@ -4,10 +4,10 @@
 console.log("/test/test.js: Begin");                // console message begin program
 const Winston = require("winston");                 // import winston module in constante
 
-const logFolder = "test/log/";                     // constant for logfile folder
+const logFolder = "test/log/";                      // constant for logfile folder
 
 // Import winston-daily-rotate-file npm package
-require('winston-daily-rotate-file');               // import winston dayly logrotate package
+const WinstonRotate = require('winston-daily-rotate-file');     // import winston dayly logrotate package
 
 // Re-créate a new loglevel  values
 const logLevels = {                                 // you can create local log level value
@@ -109,7 +109,10 @@ const logger = Winston.createLogger({                 // Create a logger
   // Test loglevel message 
   // In this example with http level, only error, warn,info and http message display
   // The level must match with logLevels values
-  logger.emergency('Emergency message');            // display message emergency level  
+  var File="test.js"
+  var Function=""
+  var Message=File+' :'+Function+' :'
+  logger.emergency(Message+'Emergency message');  // display message emergency level  
   logger.alert('Alert message');                    // display message alert level 
   logger.critical('Critical message');              // display message critical level 
   logger.error('Error message');                    // display message error level  

@@ -14,12 +14,20 @@ global.ControllerFilePath = global.ControllerPath+"file/";
 
 // Global Include Section
 eval(Fs.readFileSync(global.HomePath + "main_include.js")+'');
+eval(Fs.readFileSync(global.HomePath + "log_include.js")+'');
+
 
 // Global XSpheres Require Class section
 var CMain = require("./CMain");
 var CFile = require("./controller/file/CFile");
 var CServer = require("./view/server/CServer"); 
 
+// read main.properties file
+// open and reach properties in main.properties file
+FileName = global.HomeDir+"/main.properties";
+var PropertieFile = new CFile(FileName,"OPEN");
+global.systemName = PropertieFile.Search('main.name','');
+global.defaultLogLevel = PropertieFile.Search('log.defaultLevel','');
 
 // Global file for use 
 global.MainFile = global.DataPath+"main/main.json";
