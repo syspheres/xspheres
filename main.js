@@ -1,5 +1,7 @@
 // /main.js
 // main program of xspheres system
+File="/main.js";
+Function="";
 console.log("/main.js: Begin");
 
 // Constant system require Section
