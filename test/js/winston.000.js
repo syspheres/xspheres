@@ -4,8 +4,7 @@
 console.log("/test/winston.js: Begin");                                             // display console message begin program
 const Winston = require("winston");                                                 // import winston module in constante
 const Path = require("path");                                                       // import path module in constan
-const logFolder = __dirname+"/logs/";                                               // constante for logfile folder                                                   
-console.log("/test/winston.js: logFolder="+logFolder);                              // Display logFolder variable
+const logFolder="../logs";                                                           // constante for logfile folder                                                   
 
 
 // Import winston-daily-rotate-file npm package
@@ -13,16 +12,16 @@ const WinstonRotate = require('winston-daily-rotate-file');                     
 
 // Re-créate a new loglevel  values
 const logLevels = {                                                                 // you can create local log level value
-  emergency: 0,                                                                     // Emergency Log Level
-  alert: 1,                                                                         // Alert log Level
-  critical: 2,                                                                      // Critical log Level
-  error: 3,                                                                         // Error Log Level
-  warning: 4,                                                                       // Warning Log Level
-  notice: 5,                                                                        // Notice Log Level
-  http: 6,                                                                          // Http Log Level
-  info: 7,                                                                          // Info Log Level
-  debug: 8,                                                                         // Debug Log Level
-  trace: 9                                                                          // Trace Log Level
+  emergency: 0,
+  alert: 1,
+  critical: 2,
+  error: 3,
+  warning: 4,
+  notice: 5,
+  http: 6,
+  info: 7,
+  debug: 8,
+  trace: 9
 };
 
 // you can formating log line with 2 options
@@ -40,7 +39,7 @@ else {                                                                          
   var logLevel = process.argv[2];                                                   // default loglevel 
 };                                                                                  // End else test
 const defaultLogLevel = logLevel;                                                   // defaultLogLevel constant 
-console.log("/test/winwston.js: argv : defaultLogLevel="+defaultLogLevel);                 // display default log level
+console.log("/test/winwston.js: argv : logLevel="+defaultLogLevel);                 // display default log level
 
 
 // For select only on level log in Log File with filter
@@ -48,23 +47,22 @@ const errorFilter = Winston.format((info, opts) => {                            
   return info.level === 'error' ? info : false;                                     // select level for filter
 });                                                                                 // end winston format filter
 
-console.log("/test/winwston.js: logFolder="+logFolder);
-
 const logger = Winston.createLogger({                                               // Create a logger
-  levels: logLevels,                                                              // load logLevels in logger 
-  level: 'http',                                                                  // set the loglevel
-  // you can change the format of DateTime
-  // you can format log line with printf 
-  //format: combine(timestamp(), json()),                                         // line log format with timestamp and json
-  format: combine(                                                                // combine many format option
-    timestamp({                                                                   // timestamp format begin
-      format: 'YYYY-MM-DD hh:mm:ss.SSS A',                                        // Timestamp format structure
-    }),                                                                           // Timestamp format end
-    align(),                                                                      // Align option of format log line
-    json(),                                                                       // json format line log 
-    // printf log line
-    printf((info) => `[${info.timestamp}] ${info.level}: ${info.message}`)
-  ),
+    levels: logLevels,                                                              // load logLevels in logger 
+    level: logLevel,                                                                // set the loglevel
+    // you can change the format of DateTime
+    // you can format log line with printf 
+    //format: combine(timestamp(), json()),                                         // line log format with timestamp and json
+    format: combine(                                                                // combine many format option
+      timestamp({                                                                   // timestamp format begin
+        format: 'YYYY-MM-DD hh:mm:ss.SSS A',                                        // Timestamp format structure
+      }),                                                                           // Timestamp format end
+      align(),                                                                      // Align option of format log line
+      json(),                                                                       // json format line log 
+      // printf log line
+      printf((info) => `[${info.timestamp}] ${info.level}: ${info.message}`)
+    ),
+
 
     // Transports winston parts allow you to configure
     transports: [
@@ -112,8 +110,7 @@ const logger = Winston.createLogger({                                           
       new Winston.transports.DailyRotateFile({                                      // configure logrotatefile begin
         filename: logFolder+'test_flt_err-%DATE%.log',                              // Filename of error log with date 
         datePattern: 'YYYY-MM-DD',                                                  // date pattern format
-        maxSize: '500m',                                                            // max file size ob log                 
-        maxDays: '3d',                                                              // max days max retention log file
+        maxFiles: '14d',                                                            // nbr of days max retention log file
         level: 'error',                                                             // Level and Under are log in logfile
         format: combine(errorFilter()),                                             // Spécific format for this transport
       }),                                                                           // This transport part end
@@ -126,10 +123,9 @@ const logger = Winston.createLogger({                                           
   // In this example with http level, only error, warn,info and http message display
   // The level must match with logLevels values
  
-  var File="winston.js";
-  var LogFile="LogFile";
-  var Function="Main";
-  var Ff=File+' : '+Function+' :  ';                                                 // concat File and Function in Ff Variable
+  var File="winston.js"
+  var Function="Main"
+  var Ff=File+' : '+Function+' :  '                                                 // concat File and Function in Ff Variable
   logger.emergency(Ff+'Emergency message');                                         // display message emergency level 
   logger.alert(Ff+'Alert message');                                                 // display message alert level 
   logger.critical('Critical message');                                              // display message critical level 

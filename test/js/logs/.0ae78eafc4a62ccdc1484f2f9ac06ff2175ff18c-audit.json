@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\Project\\syspheres\\xspheres\\test\\js\\logs\\.0ae78eafc4a62ccdc1484f2f9ac06ff2175ff18c-audit.json",
+    "files": [
+        {
+            "date": 1668378369527,
+            "name": "D:\\Project\\syspheres\\xspheres\\test\\js\\logs\\test_err-2022-11-13.log",
+            "hash": "32e8b1c4aa1a09c1f6c382593b0056c3"
+        }
+    ],
+    "hashType": "md5"
+}

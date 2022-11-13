@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "logs\\.fc2b6faf452176426ce8883f90f45177c887dc1b-audit.json",
+    "files": [
+        {
+            "date": 1668292222642,
+            "name": "logs\\test_flt_err-2022-11-12.log",
+            "hash": "5d7394ca5fcd0c4fb2eaefbf6bb2ccee"
+        }
+    ],
+    "hashType": "md5"
+}

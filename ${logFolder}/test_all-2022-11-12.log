@@ -1,0 +1,21 @@
+[2022-11-12 10:41:21.863 PM] emergency: 	winston.js : Main :  Emergency message
+[2022-11-12 10:41:21.866 PM] alert: 	winston.js : Main :  Alert message
+[2022-11-12 10:41:21.867 PM] critical: 	Critical message
+[2022-11-12 10:41:21.867 PM] error: 	Error message
+[2022-11-12 10:41:21.868 PM] warning: 	Warning message
+[2022-11-12 10:41:21.869 PM] notice: 	Notice message
+[2022-11-12 10:41:21.870 PM] http: 	http message
+[2022-11-12 11:07:47.389 PM] emergency: 	winston.js : Main :  Emergency message
+[2022-11-12 11:07:47.392 PM] alert: 	winston.js : Main :  Alert message
+[2022-11-12 11:07:47.392 PM] critical: 	Critical message
+[2022-11-12 11:07:47.393 PM] error: 	Error message
+[2022-11-12 11:07:47.393 PM] warning: 	Warning message
+[2022-11-12 11:07:47.394 PM] notice: 	Notice message
+[2022-11-12 11:07:47.394 PM] http: 	http message
+[2022-11-12 11:08:03.568 PM] emergency: 	winston.js : Main :  Emergency message
+[2022-11-12 11:08:03.571 PM] alert: 	winston.js : Main :  Alert message
+[2022-11-12 11:08:03.572 PM] critical: 	Critical message
+[2022-11-12 11:08:03.572 PM] error: 	Error message
+[2022-11-12 11:08:03.573 PM] warning: 	Warning message
+[2022-11-12 11:08:03.573 PM] notice: 	Notice message
+[2022-11-12 11:08:03.573 PM] http: 	http message
