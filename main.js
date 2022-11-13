@@ -8,13 +8,15 @@ console.log("/main.js: Begin");
 const Fs = require("fs");
 
 // global variable section
+console.log("/main.js: Global Section");
 global.HomeDir = __dirname;
 global.HomePath = global.HomeDir+"/";
 global.DataPath = global.HomePath+"data/";
 global.ControllerPath = global.HomePath+"controller/";
 global.ControllerFilePath = global.ControllerPath+"file/";
 
-// Global Include Section
+// Eval Include Section
+console.log("/main.js: Eval Section");
 eval(Fs.readFileSync(global.HomePath + "main_include.js")+'');
 eval(Fs.readFileSync(global.HomePath + "log_include.js")+'');
 
