@@ -51,17 +51,17 @@ const errorFilter = Winston.format((info, opts) => {                            
 console.log("/test/winwston.js: logFolder="+logFolder);
 
 const logger = Winston.createLogger({                                               // Create a logger
-  levels: logLevels,                                                              // load logLevels in logger 
-  level: 'http',                                                                  // set the loglevel
+  levels: logLevels,                                                                // load logLevels in logger 
+  level: 'http',                                                                    // set the loglevel
   // you can change the format of DateTime
   // you can format log line with printf 
-  //format: combine(timestamp(), json()),                                         // line log format with timestamp and json
-  format: combine(                                                                // combine many format option
-    timestamp({                                                                   // timestamp format begin
-      format: 'YYYY-MM-DD hh:mm:ss.SSS A',                                        // Timestamp format structure
-    }),                                                                           // Timestamp format end
-    align(),                                                                      // Align option of format log line
-    json(),                                                                       // json format line log 
+  //format: combine(timestamp(), json()),                                           // line log format with timestamp and json
+  format: combine(                                                                  // combine many format option
+    timestamp({                                                                     // timestamp format begin
+      format: 'YYYY-MM-DD hh:mm:ss.SSS A',                                          // Timestamp format structure
+    }),                                                                             // Timestamp format end
+    align(),                                                                        // Align option of format log line
+    json(),                                                                         // json format line log 
     // printf log line
     printf((info) => `[${info.timestamp}] ${info.level}: ${info.message}`)
   ),
