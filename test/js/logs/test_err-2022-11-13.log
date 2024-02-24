@@ -1,4 +1,0 @@
-[2022-11-13 11:26:09.534 PM] emergency: 	winston.js : Main :  Emergency message
-[2022-11-13 11:26:09.537 PM] alert: 	winston.js : Main :  Alert message
-[2022-11-13 11:26:09.538 PM] critical: 	Critical message
-[2022-11-13 11:26:09.539 PM] error: 	Error message

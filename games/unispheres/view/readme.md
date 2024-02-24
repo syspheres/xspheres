@@ -1,1 +1,0 @@
-[games/story_games/view/readme.md]

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- collection My Diary, book "2009", story my hot vacation -->
-<!DOCTYPE bibliography SYSTEM "../data/story-games.dtd" >
-<collection key="zartival" lang="fr" id="C2">
-    <book>
-        <chapter>
-        </chapter>
-    </book>
-</collection>
