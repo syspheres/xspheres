@@ -1,6 +1,6 @@
-// ILogger.js
-// Winston ILogger require Module
-const ThisFile="ILogger.js"                                                          // Constant for name of this file for console log
+// ILog.js
+// Winston RLog require Module
+const ThisFile="ILog.js"                                                          // Constant for name of this file for console log
 console.log(ThisFile + " : Begin");
 
 // Configure constant 
@@ -37,7 +37,7 @@ const logger = Winston.createLogger({                                           
   //format: combine(timestamp(), json()),                                         // line log format with timestamp and json
   format: combine(                                                                // combine many format option
     timestamp({                                                                   // timestamp format begin
-      format: 'YYYY-MM-DD HH:mm:ss.SSS A',                                        // Timestamp format structure
+      format: 'YYYY-MM-DD hh:mm:ss.SSS A',                                        // Timestamp format structure
     }),                                                                           // Timestamp format end
     align(),                                                                      // Align option of format log line
     json(),                                                                       // json format line log 
@@ -59,5 +59,5 @@ const logger = Winston.createLogger({                                           
 
 console.log(ThisFile + " : configure logger section : End");
 
-module.exports = logger;
+module.exports = RLog;
 console.log(ThisFile + " : End");
