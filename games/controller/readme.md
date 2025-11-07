@@ -1,1 +1,0 @@
-/games/controller/readme.md
